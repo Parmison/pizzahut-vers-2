@@ -33,16 +33,16 @@ select_p.place(x = 100, y = 300)
 select_q = Label(screen,text = "select the quantity:", background = "gray", foreground = "maroon", font = ("times", "30" ))
 select_q.place(x = 100, y = 400)
 
-order = Label(screen, text =  "" , background = "gray", foreground = "maroon", font = ("times", "45"))
-order.place(x = 300, y = 500)
+order = Label(screen, text =  "" , background = "gray", foreground = "maroon", font = ("times", "25"))
+order.place(x = 100, y = 500)
 
 done = Button(screen, text = "finish order", command = confirm)
 done.place(x = 300, y = 450)
 
 #combobox
 
-type = "americano"
-amount = "1"
+type = StringVar()
+amount = StringVar()
 pizza_selections = Combobox(screen, textvariable = type, width = 10)
 pizza_selections['values'] = ['pepperoni','vegan','americano','cheese','salami','vegtable','hawaii','persian style','margarita','mushroom']
 pizza_selections.place(x = 350, y = 300)
@@ -52,7 +52,7 @@ pizza_amount.place(x = 350, y = 400)
 
 #radiobutton
 
-size = "S"
+size = StringVar()
 
 small = Radiobutton(screen,text = "S", variable = size, value = "S")
 small.place(x = 500, y = 300)
